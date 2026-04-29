@@ -1,4 +1,4 @@
-# Probabilistic Inventory System – (M, N) Policy Simulation
+# Probabilistic Inventory System - (M, N) Policy Simulation
 
 Monte Carlo simulation of a periodic-review inventory system to identify the optimal policy parameters M (maximum stock level) and N (review period length) under stochastic demand and lead time.
 
@@ -71,7 +71,7 @@ A retailer operates a periodic-review inventory system. Every N days the invento
 
 Policy A achieves the lowest average cost per cycle ($433.75) across 10 Monte Carlo simulated cycles. The shorter review period (N=5 days rather than 6) replenishes stock more frequently, reducing the exposure to stockouts during demand peaks and lead-time variability. The lower maximum level (M=11 rather than M=12) avoids the holding cost penalty of carrying excess inventory. Together, these parameters produce a lean and responsive replenishment rhythm that outperforms all other combinations under this demand and lead-time profile.
 
-Policy D (M=12, N=6) performs worst at $547.45 per cycle. Holding more stock for longer periods without proportional service-level improvement makes it the most expensive configuration -- the additional holding cost is not justified by reduced shortage events.
+Policy D (M=12, N=6) performs worst at $547.45 per cycle. Holding more stock for longer periods without proportional service-level improvement makes it the most expensive configuration, the additional holding cost is not justified by reduced shortage events.
 
 The margin between the best and worst policy is roughly $114 per cycle. Over a full year of 52 review cycles (assuming N=5), this compounds to approximately $5,900 in avoidable cost annually.
 
@@ -90,7 +90,7 @@ Random numbers uniformly distributed on [0, 1] are generated and mapped to deman
 5. Shortage = max(0, demand - beginning inventory)
 6. Daily cost = holding cost + shortage cost + purchase cost (on order days) + ordering cost (on order days)
 
-The same sequence of random numbers is used across all four policies so the comparison is fair -- any cost difference reflects the policy parameters, not random variation.
+The same sequence of random numbers is used across all four policies so the comparison is fair, any cost difference reflects the policy parameters, not random variation.
 
 ---
 
